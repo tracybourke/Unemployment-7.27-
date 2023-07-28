@@ -1,8 +1,13 @@
+#from getpass import getpass
+#
+#API_KEY = getpass("Please input your AlphaVantage API Key: ")
 
+import os
+from dotenv import load_dotenv
 
-from getpass import getpass
+load_dotenv() #> invoking this function loads contents of the ".env" file into the script's environment...
 
-API_KEY = getpass("Please input your AlphaVantage API Key: ")
+API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
 
 
 import requests
